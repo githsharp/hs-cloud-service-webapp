@@ -11,9 +11,32 @@
     <main>
       <h2>My Static Web App</h2>
       <img
-        src="https://media.giphy.com/media/3o7aD2VU7Rd3EQGPUI/giphy.gif"
-        alt="A gif of a cat playing with a ball of yarn"
+        src="..\src\images\what if i told you that the cloud is.jpg"
+        alt="The Cloud"
       />
+      <div class="container">
+        <h1 class="display-3 text-center" id="rubrik">Make your choice</h1>
+        <div class="row-bg">
+          <div class="col-md-12">
+            <p>
+              <button
+                class="btn btn-success"
+                onclick="this.innerHTML='You chose red!'"
+              >
+                1
+              </button>
+            </p>
+            <p>
+              <button
+                class="btn btn-warning"
+                onclick="this.innerHTML='You chose blue!'"
+              >
+                2
+              </button>
+            </p>
+          </div>
+        </div>
+      </div>
     </main>
   </body>
 </html>

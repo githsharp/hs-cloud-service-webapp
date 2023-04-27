@@ -4,16 +4,12 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="styles.css" />
-    <title>My Static Web App</title>
+    <title>My Purple Pond</title>
   </head>
 
   <body>
     <main>
-      <h2>My Static Web App</h2>
-      <img
-        src="..\src\images\what if i told you that the cloud is.jpg"
-        alt="The Cloud"
-      />
+      <h2>My Purple Pond</h2>
       <div class="container">
         <h1 class="display-3 text-center" id="rubrik">Make your choice</h1>
         <div class="row-bg">
@@ -37,6 +33,13 @@
           </div>
         </div>
       </div>
+      <p>Loading content from the API: <b id="name">...</b></p>
     </main>
+    <script>
+      (async function () {
+        const { text } = await (await fetch(`/api/message`)).json();
+        document.querySelector("#name").textContent = text;
+      })();
+    </script>
   </body>
 </html>
